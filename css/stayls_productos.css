@@ -293,6 +293,12 @@ header #ola{
     margin-bottom: 30px;
 }
 
+#firts article i{
+    display: none;
+    font-size: 400%;
+    color: white;
+}
+
 #firts article a{
     background-color:#2546ff ;
     width: 40%;
