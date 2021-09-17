@@ -546,7 +546,7 @@ header #ola{
     justify-content: space-around;
 }
 
-#containe article{
+#containe  article{
     color: white;
     *background: rgba(255, 255, 255, 0.70);
     *background-color: rgb(219, 215, 215);
@@ -578,6 +578,21 @@ header #ola{
     width: 90%;
     font-size: 110%;
     margin-bottom: 10px;
+}
+
+#containe #mantenimientoss{
+    width: 35%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#containe #mantenimientoss article{
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 
@@ -638,6 +653,13 @@ header #ola{
     #containe{
         flex-direction: column;
         align-items: center;
+    }
+    #containe #mantenimientoss{
+        width: 90%;
+    }
+
+    #containe #mantenimientoss article{
+        text-align: center;
     }
 
     #containe article{
