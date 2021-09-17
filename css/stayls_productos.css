@@ -344,7 +344,7 @@ header #ola{
     padding-top: 20px;
     padding-bottom: 20px;
     min-height: 50px;
-    margin-top: 20px;
+    *margin-top: 20px;
     margin-bottom: 20px;
 
     display: flex;
