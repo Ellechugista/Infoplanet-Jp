@@ -525,6 +525,26 @@ header #ola{
     box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 40%);
 }
 
+/*media querys*/
+@media screen and (max-width: 800px) {
+    #trift article{
+        flex-direction: column;
+    } 
+    #trift article #contain{
+        width: 80%;
+    }
+    #trift article img{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #trift article a{
+        width: 60%;
+    }
+}
+
+
 /*footer*/
 #pie{
     background: #24292e;
