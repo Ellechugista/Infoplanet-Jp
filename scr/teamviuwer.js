@@ -21,7 +21,7 @@ window.sr = ScrollReveal();
 
     });
 
-    sr.reveal("#secont, .articulo", {
+    sr.reveal("#secont, .articulo, #trift", {
         duration:2500,
         origin: "top",
         distance: "-50px"
