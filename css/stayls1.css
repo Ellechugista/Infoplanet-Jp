@@ -442,7 +442,8 @@ header #ola{
     .funciones{
         width: 80%;
         border: 2px solid white;
-        box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 25%) 
+        background: none;
+        box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 25%) 
     }
 }
 
