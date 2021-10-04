@@ -289,13 +289,13 @@ header #ola{
     display: block;
     width: 60%;
     height: auto;
-    min-height: 25px;
+    min-height: 35px;
     margin: 0 auto;
     background: rgb(17, 17, 236);
     text-align: center;
     font-size: 110%;
     color: white;
-    padding-top: 5px;
+    padding-top: 15px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 30px;
@@ -316,7 +316,7 @@ header #ola{
 #firts img{
     width: 300px;
     height: 200px;
-    border-radius: 25%;
+    border-radius: 5%;
     box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 45%);
 }
 /*media query */
@@ -334,6 +334,10 @@ header #ola{
 
     #firts article{
         width: 80%;
+    }
+
+    #firts article a{
+        padding-top: 0px;
     }
 }
 
