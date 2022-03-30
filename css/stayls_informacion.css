@@ -468,7 +468,6 @@ header #ola{
     justify-content: space-around;
 }
 
-
 #nequi{
     width: 120px;
 }
@@ -477,7 +476,11 @@ header #ola{
     width: 300px;
 }
 
-#bbva{
+#efectivo{
+    width: 250px;
+}
+
+#card{
     width: 200px;
 }
 
