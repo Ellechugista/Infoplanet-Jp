@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Lato&family=Source+Sans+Pro&family=Ubuntu&display=swap');
+:root{
+    --titulos: 'Bruno Ace SC';
+    --subtitulos: 'Ubuntu' ;
+    --links: 'lato';
+    --texto: 'Source Sans Pro';
+    --color_texto: rgb(100, 100, 100);
+    --color_hover: rgb(160, 160, 160);
+    --fondo_base: linear-gradient(35deg, rgba(32,0,240,1) 0%, rgba(38,0,255,1) 35%, rgba(0,228,255,1) 100%);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: var(--fondo_base);
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background: #1c4727;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a{
+    font-family: var(--links);
+}
+
+b{
+    font-weight: 600;    
+}
+/*CABEZERA*/
+#bt_menu, #bot-main, #part{
+    display: none;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header #logo {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header #logo #complet{
+    width:300px;
+}
+
+header #logo #contain{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.4s;
+}
+
+header #logo #contain a{
+    font-size: 100%;
+    font-weight: 600;
+    color: rgb(100, 100, 100);
+    transition: 0.3s;
+}
+
+header #logo #contain a:hover{
+    color: var(--color_hover);
+}
+
+header nav{
+    width: 98%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header nav > a{
+    background: var(--fondo_base);
+    font-weight: 700;
+    color: white;
+    width: 13%;
+    text-align: center;
+    padding: 8px 0px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+header nav > a:hover{
+    box-shadow: 0 0 5px rgba(32,0,240,1), 0 0 15px rgba(0,228,255,1), 0 0 30px rgba(0,228,255,1);
+    border: 1px blueviolet;
+}
+
+/*media queryss*/
+@media screen and (max-width:1100px) {
+    header #logo {
+        width: 60%;
+    }
+    header #logo #contain a{
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width:900px){
+    header #logo #contain{
+        display: none;
+    }
+
+    header nav > a{
+        width: 18%;
+    }
+    #bot-main{
+        display: block;
+        color: blue;
+        font-size: 150%;
+    }
+
+    header #logo{
+        justify-content: center;
+        gap: 20px;
+    }
+
+    header nav{
+        gap: 20px;
+    }
+
+    #bt_menu:checked ~ #contain{
+        background:var(--fondo_base);
+        display: flex;
+        position:absolute;
+        width: 50%;
+        left: 100px;
+        top: 80px;
+        padding: 5px 0;
+        border-radius: 15px;
+        box-shadow: 0 0 5px rgba(32,0,240,1), 0 0 15px rgba(0,228,255,1), 0 0 30px rgba(0,228,255,1);
+        border: 1px blueviolet;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    header #logo #contain a{
+        font-size: 108%;
+        color: white;
+    }
+}
+
+@media screen and (max-width:500px) {
+    header #logo #complet{
+        display: none;
+    }
+    header #logo #part{
+        display: block;
+        width: 200px;
+    }
+    header nav > a{
+        width: 30%;
+    }
+    #bt_menu:checked ~ #contain{
+        background:var(--fondo_base);
+        display: flex;
+        position:absolute;
+        width: 85%;
+        left: 25px;
+        top: 80px;
+        padding: 5px 0;
+        border-radius: 15px;
+        box-shadow: 0 0 5px rgba(32,0,240,1), 0 0 15px rgba(0,228,255,1), 0 0 30px rgba(0,228,255,1);
+        border: 1px blueviolet;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    header #logo #contain a{
+        font-size: 95%;
+    }
+
+    header #logo{
+        gap: 0px;
+    }
+
+    header nav{
+        gap: 0px;
+    }
+
+
+}
+/*primera*/
+
+#firts {
+
+    width: 100%;
+    height: 490px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+#firts article{
+    background: rgba(0,0,0,5%);
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+#firts article h2{
+    font-size: 450%;
+    width: 70%;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    text-align: left;
+}
+
+#firts article p{
+    width: 70%;
+    color: var(--color_texto);
+    font-size: 120%;
+    font-family: var(--texto);
+    font-weight: 500;
+}
+
+#firts article a{
+    background: var(--fondo_base);
+    font-weight: 700;
+    color: white;
+    width: 15%;
+    text-align: center;
+    padding: 8px 0px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+#firts article a:hover{
+    box-shadow: 0 3px 8px 3px rgba(0,0,0,40%);
+}
+
+#firts img{
+    width: 20%;
+    border-radius: 25px;
+}
+/*mediasquerys*/
+@media screen and (max-width:1100px){
+    #firts article h2{
+        font-size: 320%;
+    }
+    #firts article a{
+        width: 20%;
+    }
+}
+@media screen and (max-width:900px){
+    #firts article h2{
+        font-size: 250%;
+    }
+    #firts article a{
+        width: 20%;
+    }
+
+    #firts article p{
+        font-size: 115%;
+    }
+}
+
+@media screen and (max-width:500px){
+    #firts article h2{
+        font-size: 200%;
+    }
+    #firts{
+        flex-direction: column;
+        margin: 40px 0;
+        gap: 20px;
+        height: auto;
+    }
+    #firts article{
+        width: 80%;
+    }
+    #firts img{
+        width: 180px;
+    }
+}
+
+/*segunda*/
+
+#secont {
+    width: 90%;
+    height: auto;
+    padding: 50px 0 ;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:normal;
+    justify-content: space-around;
+}
+
+.funciones{
+    background: rgb(0, 49, 185);
+    color: white;
+    width: 23%;
+    min-height: 80%;
+    padding: 30px 0px;
+    border-radius: 10px;
+    box-shadow:  10px 15px 15px rgba(0,228,255,1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.funciones h3{
+    font-size: 180%;
+    font-family: var(--subtitulos);
+    font-weight: 700;
+    text-align: center;
+    width: 80%;
+}
+
+.funciones img{
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 25%);
+}
+
+.funciones p{
+    width: 80%;
+    font-family: var(--texto);
+    font-size: 115%;
+    text-align: center;
+}
+
+.funciones a{
+    font-size: 110%;
+    font-weight: 700;
+    text-align: center;
+    width: 60%;
+    color: rgb(196, 196, 196);
+    padding: 5px 0;
+    border-radius: 15px;
+    transition: 0.4s ;
+}
+
+.funciones a:hover{
+    box-shadow:  5px 5px 5px 5px rgba(0, 0, 0, 30%);
+    color: white;
+}
+/*mediasquerys*/
+@media screen and (max-width:1100px){
+    #secont{
+        gap: 50px;
+    }
+    #secont .funciones{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width:850px){
+    #secont{
+        gap: 20px;
+    }
+    #secont .funciones{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:500px){
+    #secont{
+        gap: 20px;
+    }
+    #secont .funciones{
+        width: 85%;
+    }
+}
+
+/*tercera*/
+
+#trifth {
+    width: 95%;
+    margin: 0 auto;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#trifth article{
+    background: rgba(0,0,0,5%);
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+#trifth article h2{
+    font-size: 420%;
+    width: 70%;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    text-align: right;
+}
+
+#trifth article p{
+    width: 70%;
+    color: var(--color_texto);
+    font-size: 120%;
+    font-family: var(--texto);
+    font-weight: 500;
+    text-align: right;
+}
+
+#trifth article a{
+    background: var(--fondo_base);
+    font-weight: 700;
+    color: white;
+    width: 15%;
+    text-align: center;
+    padding: 8px 0px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+#trifth article a:hover{
+    box-shadow: 0 3px 8px 3px rgba(0,0,0,40%);
+}
+
+#trifth img{
+    width: 35%;
+    border-radius: 25px;
+}
+/*mediasquerys*/
+@media screen and (max-width:1100px){
+    #trifth article h2{
+        font-size: 320%;
+    }
+    #trifth article a{
+        width: 20%;
+    }
+}
+@media screen and (max-width:900px){
+    #trifth article h2{
+        font-size: 250%;
+    }
+    #trifth article a{
+        width: 30%;
+    }
+
+    #trifth article p{
+        font-size: 115%;
+    }
+}
+
+@media screen and (max-width:500px){
+    #trifth article h2{
+        font-size: 200%;
+    }
+    #trifth{
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+    }
+    #trifth article{
+        width: 80%;
+    }
+    #trifth img{
+        width: 280px;
+    }
+}
+
+/*cuarta parte*/
+
+#fourt{
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#fourt article{
+    width: 25%;
+    height: auto;
+    min-height: 300px;
+    padding-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+
+#fourt article i{
+    font-size: 450%;
+    margin-bottom: 20px;
+}
+
+#fourt article svg{
+    width: 25%;
+}
+
+#fourt article h3{
+    font-family: var(--subtitulos);
+    font-size: 150%;
+}
+
+#fourt article p{
+    font-family: var(--texto);
+    width: 90%;
+    text-align: center;
+    font-size: 110%;
+}
+
+#fourt article a{
+    display: flex;
+    font-family: var(--links);
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;
+    color: #838383;
+    font-weight: 700;
+    border-radius: 15px;
+}
+
+#fourt article a:hover{
+    color: blue;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 25%);
+}
+
+.separadores{
+    width: 8px;
+    height: 250px;
+    background: var(--fondo_base);
+    border-radius: 35px;
+}
+
+.sombra{
+    background: rgba(0, 0, 0, 10%);
+    border-radius: 10px;
+}
+
+/*media queryss*/
+@media screen and (max-width:800px) {
+    #fourt{
+        flex-wrap: wrap;
+    }
+    #fourt article{
+        width: 70%;
+        margin: 0;
+        margin-top: 50px;
+    }
+    .separadores{
+        display: none;
+    }
+    #wasa, #domicilio{
+        background: rgba(0, 0, 0, 10%);
+        border-radius: 10px;
+    }
+}
+
+/*footer*/
+footer{
+    width: 100%;
+    background: rgba(0,0,0,90%);
+    padding: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer h3{
+    margin: 0 auto;
+    color: white;
+}
+
+footer article{
+    width: 80%;
+
+    display: flex;
+    flex-direction: row;
+    align-items:start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer article .date{
+    width: 25%;
+    text-align: center;
+}
+
+footer article .date h3{
+    font-size: 140%;
+    font-family: var(--subtitulos);
+    color: rgb(68, 48, 202);
+}
+
+footer article .date p{
+    font-size: 110%;
+    font-family: var(--texto);
+    color: rgb(167, 167, 167);
+}
+
+footer article .date a{
+    font-size: 100%;
+    font-weight: 700;
+    font-family: var(--links);
+    color:rgb(151, 151, 151);
+    transition: 0.3s;
+}
+
+footer article .date a:hover{
+    color: rgb(219, 219, 219);
+}
+
+footer article .date svg{
+    width: 8%;
+}
+
+/*medias queris*/
+
+@media screen and (max-width:900px){
+    footer article .date{
+        width: 30%;
+    }
+
+    footer article{
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:500px){
+    footer article .date{
+        width: 80%;
+    }
+}

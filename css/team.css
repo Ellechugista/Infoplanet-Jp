@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Lato&family=Source+Sans+Pro&family=Ubuntu&display=swap');
+:root{
+    --titulos: 'Bruno Ace SC';
+    --subtitulos: 'Ubuntu' ;
+    --links: 'lato';
+    --texto: 'Source Sans Pro';
+    --color_texto: rgb(100, 100, 100);
+    --color_hover: rgb(160, 160, 160);
+    --fondo_base: linear-gradient(35deg, rgba(32,0,240,1) 0%, rgba(38,0,255,1) 35%, rgba(0,228,255,1) 100%);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: var(--fondo_base);
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background: #1c4727;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a{
+    font-family: var(--links);
+}
+
+b{
+    font-weight: 600;    
+}
+/*CABEZERA*/
+#bt_menu, #bot-main, #part{
+    display: none;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header #logo {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header #logo #complet{
+    width:300px;
+}
+
+header #logo #contain{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.4s;
+}
+
+header #logo #contain a{
+    font-size: 100%;
+    font-weight: 600;
+    color: rgb(100, 100, 100);
+    transition: 0.3s;
+}
+
+header #logo #contain a:hover{
+    color: var(--color_hover);
+}
+
+header nav{
+    width: 98%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header nav > a{
+    background: var(--fondo_base);
+    font-weight: 700;
+    color: white;
+    width: 13%;
+    text-align: center;
+    padding: 8px 0px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+header nav > a:hover{
+    box-shadow: 0 0 5px rgba(32,0,240,1), 0 0 15px rgba(0,228,255,1), 0 0 30px rgba(0,228,255,1);
+    border: 1px blueviolet;
+}
+
+/*media queryss*/
+@media screen and (max-width:1100px) {
+    header #logo {
+        width: 60%;
+    }
+    header #logo #contain a{
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width:900px){
+    header #logo #contain{
+        display: none;
+    }
+
+    header nav > a{
+        width: 18%;
+    }
+    #bot-main{
+        display: block;
+        color: blue;
+        font-size: 150%;
+    }
+
+    header #logo{
+        justify-content: center;
+        gap: 20px;
+    }
+
+    header nav{
+        gap: 20px;
+    }
+
+    #bt_menu:checked ~ #contain{
+        background:var(--fondo_base);
+        display: flex;
+        position:absolute;
+        width: 50%;
+        left: 100px;
+        top: 80px;
+        padding: 5px 0;
+        border-radius: 15px;
+        box-shadow: 0 0 5px rgba(32,0,240,1), 0 0 15px rgba(0,228,255,1), 0 0 30px rgba(0,228,255,1);
+        border: 1px blueviolet;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    header #logo #contain a{
+        font-size: 108%;
+        color: white;
+    }
+}
+
+@media screen and (max-width:500px) {
+    header #logo #complet{
+        display: none;
+    }
+    header #logo #part{
+        display: block;
+        width: 200px;
+    }
+    header nav > a{
+        width: 30%;
+    }
+    #bt_menu:checked ~ #contain{
+        background:var(--fondo_base);
+        display: flex;
+        position:absolute;
+        width: 85%;
+        left: 25px;
+        top: 80px;
+        padding: 5px 0;
+        border-radius: 15px;
+        box-shadow: 0 0 5px rgba(32,0,240,1), 0 0 15px rgba(0,228,255,1), 0 0 30px rgba(0,228,255,1);
+        border: 1px blueviolet;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    header #logo #contain a{
+        font-size: 95%;
+    }
+
+    header #logo{
+        gap: 0px;
+    }
+
+    header nav{
+        gap: 0px;
+    }
+}
+
+/*primera parte*/
+
+#firts {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+#firts img{
+    width: 300px;
+}
+
+#firts article{
+    background: rgba(0,0,0,5%);
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-radius: 15px;
+}
+
+#firts article h2{
+    font-family: var(--subtitulos);
+    font-size: 450%;
+}
+
+#firts article p{
+    width: 70%;
+    font-size: 120%;
+    font-family: var(--texto);
+    color: var(--color_texto);
+    margin-bottom: 10px;
+    text-align:right ;
+}
+
+#firts article a{
+    background: var(--fondo_base);
+    width: 40%;
+    text-align: center;
+    font-size: 100%;
+    font-weight: 600;
+    font-family: var(--links);
+    height: 28px;
+    color: white;
+    padding-top: 5px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+#firts article a:hover{
+    box-shadow: 5px 5px 5px rgba(0,0,0,40%);
+}
+
+#firts article div{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width:1100px){
+    #firts article h2{
+        font-size: 320%;
+    }
+    #firts article div{
+        width: 60%;
+    }
+}
+@media screen and (max-width:800px){
+    #firts article h2{
+        font-size: 250%;
+    }
+    #firts img{
+        width: 230px;
+    }
+
+    #firts article div{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:700px){
+    #firts{
+        flex-direction: column-reverse;
+        margin: 40px 0;
+        gap: 20px;
+        height: auto;
+    }
+    #firts article{
+        width: 80%;
+    }
+    #firts img{
+        width: 300px;
+    }
+}
+
+/*separador*/
+
+.sep{
+    width: 90%;
+    background: var(--fondo_base);
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 15px;
+    padding: 5px 0;
+}
+
+.sep h2{
+    font-size: 180%;
+    font-family: var(--subtitulos);
+    color: white;
+    text-align: center;
+}
+
+/*segunda parte*/
+#secont {
+
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#secont h2, h4{
+    color: white;
+    background: #27332a;
+    padding: 5px;
+    width: 110.3%;
+    font-size: 150%;
+    text-align: center;
+}
+#secont .articulo{
+    background-color: rgb(219, 215, 215);;
+    width: 70%;
+    height: auto;
+    min-height: 300px;
+    margin-top: 50px;
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#secont .articulo img{
+    width:inherit;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 40%);
+}
+
+#secont .articulo p{
+    color: black;
+    width: 90%;
+    font-size: 130%;
+    margin-bottom: 20px;
+}
+
+/*media queryssss*/
+
+@media screen and (max-width: 800px) {
+    #secont .articulo{
+        width: 100%;
+    }
+    #secont h2, h4{
+        font-size: 180%;
+    }
+}
+
+/*TERCERA PARTE*/
+
+
+#trift {
+    width: 100%;
+    height: 490px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+
+#trift article{
+    background: rgba(0,0,0,5%);
+    width: 40%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+#trift article h2{
+    font-size: 350%;
+    width: 70%;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    text-align: left;
+}
+
+#trift article p{
+    width: 70%;
+    color: var(--color_texto);
+    font-size: 120%;
+    font-family: var(--texto);
+    font-weight: 500;
+}
+
+#trift article a{
+    background: var(--fondo_base);
+    font-weight: 700;
+    color: white;
+    width: 20%;
+    text-align: center;
+    padding: 7px 0px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+#trift article a:hover{
+    box-shadow: 5px 5px 5px rgba(0,0,0,40%);
+}
+
+#trift img{
+    width: 400px;
+    border-radius: 25px;
+}
+@media screen and (max-width:1100px){
+    #trift article h2{
+        font-size: 320%;
+    }
+    #trift article a{
+        width: 20%;
+    }
+}
+@media screen and (max-width:900px){
+    #trift article h2{
+        font-size: 250%;
+    }
+    #trift article a{
+        width: 30%;
+    }
+    #trift img{
+        width: 300px;
+    }
+
+    #trift article p{
+        font-size: 115%;
+    }
+}
+
+@media screen and (max-width:700px){
+    #trift article h2{
+        font-size: 180%;
+    }
+    #trift{
+        flex-direction: column;
+        margin: 40px 0;
+        gap: 20px;
+        height: auto;
+    }
+    #trift article{
+        width: 80%;
+    }
+    #trift img{
+        width: 300px;
+    }
+}
+
+
+/*footer*/
+footer{
+    width: 100%;
+    background: rgba(0,0,0,90%);
+    padding: 20px 0;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer h3{
+    margin: 0 auto;
+    color: white;
+}
+
+footer article{
+    width: 80%;
+
+    display: flex;
+    flex-direction: row;
+    align-items:start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer article .date{
+    width: 25%;
+    text-align: center;
+}
+
+footer article .date h3{
+    font-size: 140%;
+    font-family: var(--subtitulos);
+    color: rgb(68, 48, 202);
+}
+
+footer article .date p{
+    font-size: 110%;
+    font-family: var(--texto);
+    color: rgb(167, 167, 167);
+}
+
+footer article .date a{
+    font-size: 100%;
+    font-weight: 700;
+    font-family: var(--links);
+    color:rgb(151, 151, 151);
+    transition: 0.3s;
+}
+
+footer article .date a:hover{
+    color: rgb(219, 219, 219);
+}
+
+footer article .date svg{
+    width: 8%;
+}
+
+
+/*medias queris*/
+
+@media screen and (max-width:900px){
+    footer article .date{
+        width: 30%;
+    }
+
+    footer article{
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:500px){
+    footer article .date{
+        width: 80%;
+    }
+}
+
+
