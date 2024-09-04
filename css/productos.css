@@ -378,7 +378,7 @@ header nav > a:hover{
 
 .title_product{
     background-color: rgba(0,0,0,90%);
-    width: 80%;
+    width: 100%;
     padding: 10px 0;
 }
 
@@ -556,7 +556,7 @@ header nav > a:hover{
     font-weight: 600;
     font-size: 100%;
     text-align:center;
-    width: 10%;
+    width: 15%;
     height: 22px;
     padding: 5px 8px;
     transition: 0.4s;
